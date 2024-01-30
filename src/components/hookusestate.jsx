@@ -17,12 +17,12 @@ const Hookusestate = () => {
   //Set Form Data
   const [formData, setFormData] = useState(initialState);
 
-  function handleNameChange(event) {
-    setFormData({
-      ...formData,
-      name: event.target.value,
-    });
-  }
+  //   function handleNameChange(event) {
+  //     setFormData({
+  //       ...formData,
+  //       name: event.target.value,
+  //     });
+  //   }
 
   function handleCitySelect(event) {
     setFormData({
@@ -55,7 +55,12 @@ const Hookusestate = () => {
         <div className="flex justify-center items-center gap-2 mt-5">
           <div>
             <input
-              onChange={handleNameChange}
+              onChange={(event) => {
+                setFormData({
+                  ...formData,
+                  [event.target.name]: event.target.value,
+                });
+              }}
               className="p-2  rounded-md border-orange-100 border-l-4 border-2"
               type="text"
               name="name"
