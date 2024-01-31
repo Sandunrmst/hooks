@@ -1,6 +1,7 @@
 import "./App.css";
 import Hookusecontext from "./components/hookusecontext";
 import Hookuseeffect from "./components/hookuseeffect";
+import Hookusereducer from "./components/hookusereducer";
 import Hookusestate from "./components/hookusestate";
 
 function App() {
@@ -9,7 +10,8 @@ function App() {
       {/* <Hookusestate /> */}
 
       {/* <Hookuseeffect /> */}
-      <Hookusecontext />
+      {/* <Hookusecontext /> */}
+      <Hookusereducer />
     </>
   );
 }
